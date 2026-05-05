@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --bg: rgb(12, 12, 16);
+    --text: rgb(240, 240, 245);
+    --text2: rgb(122, 122, 150);
+    --accent: rgb(124, 106, 247);
+    --accent2: rgb(168, 157, 249);
+    --accent-glow: rgba(124, 106, 247, 0.25);
+    --surface: rgb(19, 19, 26);
+    --surface2: rgb(26, 26, 36);
+    --border: rgba(255, 255, 255, 0.07);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    display: flex;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 220px;
+    min-height: 100vh;
+    background: var(--surface);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    padding: 28px 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 900;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    padding: 0 8px 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--text2);
+    text-transform: uppercase;
+    padding: 0 8px;
+    margin-bottom: 8px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text2);
+    margin-bottom: 2px;
+    border: 1px solid transparent;
+}
+
+.nav-item:hover {
+    background: var(--surface2);
+    color: var(--text);
+}
+
+.nav-item.active {
+    background: var(--accent-glow);
+    color: var(--accent2);
+    border-color: rgba(124, 106, 247, 0.2);
+}
+
+.nav-item .icon {
+    font-size: 18px;
+    width: 22px;
+    text-align: center;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text2);
+    padding-left: 8px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+
+.main-content {
+    margin-left: 220px;
+    width: 100%;
+    height: 100vh;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}

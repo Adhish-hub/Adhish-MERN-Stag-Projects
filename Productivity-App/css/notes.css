@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+    --bg: rgb(45, 45, 65);
+    --text: rgb(240, 240, 245);
+    --text2: rgb(122, 122, 150);
+    --accent: rgb(128, 109, 249);
+    --accent2: rgb(168, 157, 249);
+    --accent-glow: rgba(124, 106, 247, 0.25);
+    --surface: rgb(19, 19, 26);
+    --surface2: rgb(26, 26, 36);
+    --border: rgba(255, 255, 255, 0.07);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+button {
+    padding: 8px 12px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--accent);
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent2);
+    box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Form */
+#noteForm {
+    display: none;
+    background: var(--surface);
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    max-width: 400px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    background: var(--surface2);
+    color: var(--text);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--text2);
+}
+
+textarea {
+    height: 80px;
+}
+
+#notesContainer {
+    max-width: 500px;
+    margin: auto;
+}
+
+.note {
+    background: var(--surface);
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.note:hover {
+    transform: translateY(-3px);
+}
+
+.note h3 {
+    color: var(--accent);
+}
+
+.note p {
+    color: var(--text2);
+}

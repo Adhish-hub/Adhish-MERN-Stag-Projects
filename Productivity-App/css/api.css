@@ -1,0 +1,58 @@
+:root {
+    --bg: rgb(12, 12, 16);
+    --text: rgb(240, 240, 245);
+    --text2: rgb(122, 122, 150);
+    --accent: rgb(124, 106, 247);
+    --accent2: rgb(168, 157, 249);
+    --accent-glow: rgba(124, 106, 247, 0.25);
+    --surface: rgb(19, 19, 26);
+    --surface2: rgb(26, 26, 36);
+    --border: rgba(255, 255, 255, 0.07);
+
+}  
+
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', sans-serif;
+    padding: 24px;
+}
+
+h1 {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+#apiData {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.api-post {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    transition: 0.25s ease;
+}
+
+.api-post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    border-color: var(--accent);
+}
+
+.api-post h2 {
+    color: var(--accent2);
+    margin-bottom: 8px;
+}
+
+.api-post p {
+    color: var(--text2);
+}
+
+.api-error {
+    color: red;
+}

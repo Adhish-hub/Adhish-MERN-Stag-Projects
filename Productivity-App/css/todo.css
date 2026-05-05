@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+:root {
+    --bg: rgb(12, 12, 16);
+    --text: rgb(240, 240, 245);
+    --text2: rgb(122, 122, 150);
+    --accent: rgb(124, 106, 247);
+    --accent2: rgb(168, 157, 249);
+    --accent-glow: rgba(124, 106, 247, 0.25);
+    --surface: rgb(19, 19, 26);
+    --surface2: rgb(26, 26, 36);
+    --border: rgba(255, 255, 255, 0.07);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 120px auto 0 auto;
+    max-width: 500px;
+    max-width: 500px;
+}
+
+.stats-container {
+    background-color: var(--surface);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+
+}
+
+.details {
+    width: 100%;
+}
+
+#progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: var(--accent2);
+
+}
+
+#progress {
+    width: 80%;
+    height: 10px;
+    background-color: var(--accent2);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+#numbers {
+    width: 100px;
+    height: 100px;
+    background-color: var(--accent-glow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+form {
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 16px;
+    background-color: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    color: var(--text);
+}
+
+button {
+    padding: 16px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent);
+    color: var(--text);
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+.task-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.task{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.task input{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: var(--accent);
+}
+.taskItem{
+    display: flex;
+    background-color: var(--surface2);
+    padding: 15px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.completed p{
+    text-decoration: line-through;
+    color: var(--accent-glow);
+}
+.icon {
+    display: flex;
+    gap: 12px;
+}
+
+.icon span {
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+}
+
+.icon span:hover {
+    transform: scale(1.2);
+}

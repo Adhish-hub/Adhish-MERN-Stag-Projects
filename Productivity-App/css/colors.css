@@ -1,0 +1,82 @@
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    margin-top: 30px;
+    font-size: 2.5rem;
+}
+input {
+    padding: 12px;
+    width: 220px;
+    border-radius: 8px;
+    border: none;
+}
+button {
+    padding: 12px 16px;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    color: white;
+    cursor: pointer;
+}
+.container {
+    margin-top: 20px;
+    backdrop-filter: blur(12px);
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
+}
+.copybtn {
+    padding: 5px 10px;
+    border-radius: 6px;
+    border: none;
+    background: white;
+    color: black;
+    cursor: pointer;
+}
+#palette {
+    margin-top: 30px;
+    width: 90%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+}
+#red {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    opacity: 0;
+    transition: 0.3s;
+}
+#red.show {
+    opacity: 1;
+}
+.box {
+    height: 160px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px;
+}
+.code {
+    background: rgba(0,0,0,0.6);
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+}

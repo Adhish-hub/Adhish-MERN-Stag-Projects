@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Notes </title>
+  <link rel="stylesheet" href="../css/notes.css">
+</head>
+
+<body>
+
+  <h1>📝 My Notes</h1>
+  <button onclick="showForm()">➕ Add Note</button>
+
+  <div id="noteForm">
+    <input type="text" id="titleInput" placeholder="Enter title">
+
+    <textarea id="contentInput" placeholder="Write your note..."></textarea>
+
+    <div class="form-buttons">
+
+      <button id="save" onclick="saveNote()">Save</button>
+      <button onclick="hideForm()">Cancel</button>
+    </div>
+  </div>
+
+
+  <div id="notesContainer"></div>
+  <script src="../scripts/notes.js"></script>
+ 
+</body>
+
+</html>
